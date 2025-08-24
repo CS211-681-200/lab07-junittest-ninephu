@@ -11,6 +11,7 @@ public class Student {
         score = 0;
     }
 
+
     public Student(String id, String name, double score) {
         this.id = id;
         this.name = name;
@@ -32,7 +33,18 @@ public class Student {
     // TODO: design grading system for Student
     public String grade()
     {
-        return score > 60 ? "P" : "F";
+        if (score >= 80) {
+            return "A";
+        } else if (score >= 70) {
+            return "B";
+        } else if (score >= 60) {
+            return "C";
+        } else if (score >= 50) {
+            return "D";
+        } else{
+            return "F";
+        }
+
     }
 
     public boolean isId(String id) {
